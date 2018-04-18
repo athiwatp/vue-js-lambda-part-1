@@ -16,6 +16,7 @@ router.post('/', async (req, res) => {
   const collection = await loadMicroPostsCollection();
   await collection.insertOne({
     text: req.body.text,
+    createdAt: new Date(),
   });
   res.status(200).send();
 });
