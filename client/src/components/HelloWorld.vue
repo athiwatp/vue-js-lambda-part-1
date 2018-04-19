@@ -10,7 +10,7 @@
     </button>
     <p v-if="profile">
       Hello there, {{ profile.name }}. Why don't you
-      <router-link :to="{ name: 'share-your-thoughts' }">
+      <router-link :to="{ name: 'ShareThoughts' }">
         share your thoughts?
       </router-link>
     </p>

@@ -18,9 +18,9 @@ class MicroPostsService {
     })
   }
 
-  static insertMicroPost (microPost) {
-    return axios.post({
-      text: microPost.text
+  static insertMicroPost (text) {
+    return axios.post(url, {
+      text
     })
   }
 }
