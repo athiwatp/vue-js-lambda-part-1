@@ -26,7 +26,7 @@
         {{ `${microPost.createdAt.getDate()}/${microPost.createdAt.getMonth() + 1}/${microPost.createdAt.getFullYear()}` }}
       </div>
       <p class="text">{{ microPost.text }}</p>
-      <p class="author">- Unknown</p>
+      <p class="author">- {{ microPost.author.name || 'Unknown' }}</p>
     </div>
   </div>
 </div>
@@ -59,6 +59,7 @@ export default {
     signIn: Auth0.signIn,
     signOut () {
       Auth0.signOut({
+        clientID: 'KsXpF1d1L0vYdwiBG10VNOjw1lJmBGPy',
         returnTo: 'http://localhost:8080/'
       })
     }
